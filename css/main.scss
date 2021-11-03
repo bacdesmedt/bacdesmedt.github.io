@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&display=swap');
+
+:root {
+  --primary-color: #232425;
+  --secundary-color: #202122;
+  --accent-color: #e78d05;
+  --light-color: #eeeeee;
+  --light-color-fade: #eeeeee77;
+}
+
+
+//ALL
+html {
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html, body, div, article, section, table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Montserrat', system-ui;
+  font-weight: 200;
+  font-size: 100%;
+  vertical-align: center;
+}
+
+body {
+  color: white;
+  max-width: 100%;
+  background-image: url("../images/simple_scape.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+a {
+  color: var(--light-color-fade);
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+//SMALL/MOBILE
+
+//NAVIGATION
+.navbar {
+  color: blue;
+}
+
+//SOCIAL
+#socials {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.6em;
+
+    div {
+      margin: 0 auto;
+      max-width: 100px;
+    }
+  }
+
+  img {
+    width: 6em;
+    height: auto;
+  }
+}
+
+//FOOTER
+#foot {
+  justify-content: center;
+  text-align: center;
+  div {
+    margin: 5em auto .5em auto;
+  }
+
+  a {
+    color: white;
+  }
+}
