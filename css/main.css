@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&display=swap") z;
 :root {
   --primary-color: #232425;
   --secundary-color: #202122;
@@ -17,13 +16,13 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-html, body, div, article, section, table {
+html, body, div, article, section, table, header {
   margin: 0;
   padding: 0;
   border: 0;
   font-family: "Montserrat", system-ui;
   font-weight: 200;
-  font-size: 100%;
+  font-size: 16px;
   vertical-align: center;
 }
 
@@ -45,10 +44,189 @@ ul {
   list-style-type: none;
 }
 
-.navbar {
-  color: blue;
+header.navbar {
+  background: var(--accent-color);
+}
+header.navbar .logo-img {
+  display: none;
+}
+header.navbar .logo-text {
+  content: "b/d";
+  font-family: "Inconsolata Expanded Light", monospace;
+  font-size: 1.3rem;
+  color: white;
+}
+header.navbar .logo-text span {
+  color: var(--primary-color);
+}
+header.navbar nav {
+  display: flex;
+  justify-content: right;
+  background: none;
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 0;
+}
+header.navbar nav li {
+  float: left;
+}
+header.navbar nav li a {
+  color: white;
+  font-size: 1em;
+  font-weight: 300;
+  padding: 0.1em 1em;
+}
+header.navbar nav li a:hover {
+  color: var(--primary-color);
+}
+header.navbar nav #current a {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+header.navbar nav #current a:hover {
+  color: white;
 }
 
+.logo-container {
+  text-align: center;
+}
+.logo-container span {
+  color: var(--accent-color);
+  font-family: "Inconsolata Extra Expanded Light", monospace;
+  font-size: 3rem;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.logo-container #ben {
+  margin: -0.5em 0 0 -1.8em;
+}
+.logo-container #slash {
+  margin: 0;
+  font-family: "Inconsolata Condensed Light", monospace;
+  font-size: 8rem;
+}
+.logo-container #dees {
+  color: white;
+  margin: 0.5em 0 0 0.7em;
+}
+.logo-container #dees:after, .logo-container #dees:hover {
+  content: "d";
+  animation-name: typer-anim;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  max-width: 100%;
+}
+
+@keyframes typer-anim {
+  0% {
+    content: "d";
+  }
+  3% {
+    content: "du";
+  }
+  6% {
+    content: "dur";
+  }
+  9% {
+    content: "durv";
+  }
+  12% {
+    content: "durve";
+  }
+  15% {
+    content: "durver";
+  }
+  18% {
+    content: "d";
+  }
+  21% {
+    content: "do";
+  }
+  24% {
+    content: "doe";
+  }
+  27% {
+    content: "doen";
+  }
+  30% {
+    content: "doene";
+  }
+  33% {
+    content: "doener";
+  }
+  36% {
+    content: "d";
+  }
+  39% {
+    content: "da";
+  }
+  42% {
+    content: "dan";
+  }
+  45% {
+    content: "dans";
+  }
+  48% {
+    content: "danse";
+  }
+  51% {
+    content: "danser";
+  }
+  54% {
+    content: "d";
+  }
+  57% {
+    content: "de";
+  }
+  60% {
+    content: "dev";
+  }
+  63% {
+    content: "deve";
+  }
+  66% {
+    content: "devel";
+  }
+  69% {
+    content: "develo";
+  }
+  72% {
+    content: "develop";
+  }
+  75% {
+    content: "develope";
+  }
+  78% {
+    content: "developer";
+  }
+  81% {
+    content: "d";
+  }
+  84% {
+    content: "de";
+  }
+  87% {
+    content: "des";
+  }
+  90% {
+    content: "desm";
+  }
+  93% {
+    content: "desme";
+  }
+  96% {
+    content: "desmed";
+  }
+  100% {
+    content: "desmedt";
+  }
+}
 #socials {
   text-align: center;
   justify-content: center;
