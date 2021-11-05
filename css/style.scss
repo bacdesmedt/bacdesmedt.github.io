@@ -17,7 +17,7 @@ html {
   scrollbar-width: none;
 }
 
-html, body, div, span, ul, li {
+html, body, div, span, ul, li, section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,20 +26,27 @@ html, body, div, span, ul, li {
 }
 
 body {
+  background: var(--dark-color);
   color: white;
-  padding: 2em;
-
-  max-width: 100%;
-  background-image: url("../images/laptop_long.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  width: 100%;
 }
 
-//LOGO ANIMATION
+.container {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+
+#laptop {
+  width: 100%;
+  position: absolute;
+  margin-top: 70px;
+}
+
+//LOGO
 
 .logo-container {
-  padding: 2em;
   text-align: center;
 
   .wrapper {
@@ -94,7 +101,7 @@ body {
 
 //QUOTE
 .quote {
-  margin-top: 5em;
+  margin: 3.3em 0 0 .8em ;
   padding: .9em;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
@@ -110,7 +117,7 @@ body {
 //LINKS
 .links {
   text-align: center;
-
+  margin: 3em 0;
 
   ul {
     display: inline-block;
@@ -133,4 +140,123 @@ body {
       }
     }
   }
+}
+
+@media only screen and (min-width: 400px) {
+  .quote {
+    margin: 3.8em 0 0 .8em ;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .logo-container{
+    padding: 2em;
+  }
+
+  #laptop {
+    margin-top: 100px;
+  }
+  .quote {
+    margin: 5.8em 0 0 .8em ;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .quote {
+    margin: 7.8em 0 0 .8em ;
+    font-size: 1.8em;
+
+    span {
+      font-size: 0.6em;
+    }
+  }
+}
+
+@media only screen and (min-width: 720px) {
+
+  #laptop {
+    margin-top: 180px;
+  }
+
+  .logo-container .wrapper {
+    padding: 3em;
+    width: 400px;
+    span {
+      font-size: 60px;
+    }
+
+    #slash {
+      font-size: 180px;
+    }
+
+    #type-target &:after {
+        right: -11px;
+        border-right: 2.6px solid white;
+    }
+  }
+  .quote {
+    margin: 3.8em 0 0 .5em ;
+    font-size: 2.1em;
+    max-width: 920px;
+    span {
+      font-size: 0.7em;
+    }
+  }
+  li {
+    float: left;
+    margin-left: 1.3em;
+  }
+}
+
+
+@media only screen and (min-width: 960px) {
+
+  #laptop {
+    margin-top:0;
+    bottom: 0;
+    right: 0;
+    max-width: 60%;
+
+  }
+
+  .logo-container {
+    text-align: left;
+  }
+  .quote {
+    margin: 0 0 ;
+    font-size: 2.1em;
+    max-width: 920px;
+    span {
+      font-size: 0.7em;
+    }
+  }
+  .links {
+    position: absolute;
+
+    li {
+      float: left;
+      margin-left: 1.3em;
+    }
+  }
+}
+
+//
+@media only screen and (min-width: 1280px) {
+
+  .container {
+    margin-left: 5em;
+  }
+  #laptop {
+    max-width: 70%;
+
+  }
+
+  .links {
+      right: 30%;
+      margin: 0.5em;
+      padding: 0;
+      top: 10px;
+
+  }
+
 }
