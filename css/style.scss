@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300&display=swap');
+
+:root {
+  --dark-color: #232425;
+  --orange-color: #e78d05;
+}
+
+//ALL
+html {
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html, body, div, span, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Montserrat, system-ui;
+  font-size: 16px;
+}
+
+body {
+  color: white;
+  padding: 2em;
+
+  max-width: 100%;
+  background-image: url("../images/laptop_long.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+//LOGO ANIMATION
+
+.logo-container {
+  padding: 2em;
+  text-align: center;
+
+  .wrapper {
+    display: inline-flex;
+    margin: auto;
+    width: 300px;
+
+    span {
+      color: var(--orange-color);
+      font-family: "Inconsolata Extra Expanded Light", monospace;
+      font-size: 40px;
+      letter-spacing: -5px;
+    }
+
+    #ben {
+      margin: .4em -.4em 0 0;
+    }
+
+    #slash {
+      margin: 0;
+      font-family: "Inconsolata Condensed Light", monospace;
+      font-size: 110px;
+    }
+
+    #type-target {
+      color: white;
+      margin: 1.4em 0 0 -.4em;
+      left: 0;
+      text-align: left;
+      //background: blue;
+      position: relative;
+      //width: 230px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        right: -8px;
+        height: 70%;
+        border-right: 2px solid white;
+        animation: blink 1.2s steps(2) infinite;
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+
+//QUOTE
+.quote {
+  margin-top: 5em;
+  padding: .9em;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.5em;
+
+  span {
+    font-style: normal;
+    margin-left: 10px;
+  }
+}
+
+//LINKS
+.links {
+  text-align: center;
+
+
+  ul {
+    display: inline-block;
+    text-align: left;
+    list-style: none;
+
+    li {
+      padding: .5em;
+
+      a {
+        text-decoration: none;
+        color: var(--orange-color);
+        font-family: "Inconsolata Extra Expanded Light", monospace;
+        font-size: 30px;
+        letter-spacing: -3px;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
