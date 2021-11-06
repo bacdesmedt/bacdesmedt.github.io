@@ -41,13 +41,14 @@ body {
 #laptop {
   width: 100%;
   position: absolute;
-  margin-top: 70px;
+  margin-top: 120px;
 }
 
 //LOGO
 
 .logo-container {
   text-align: center;
+  padding-top: 2em;
 
   .wrapper {
     display: inline-flex;
@@ -101,7 +102,7 @@ body {
 
 //QUOTE
 .quote {
-  margin: 3.3em 0 0 .8em ;
+  margin: 4em 0 0 .8em ;
   padding: .9em;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
@@ -142,19 +143,13 @@ body {
   }
 }
 
-@media only screen and (min-width: 400px) {
-  .quote {
-    margin: 3.8em 0 0 .8em ;
-  }
-}
-
 @media only screen and (min-width: 500px) {
   .logo-container{
     padding: 2em;
   }
 
   #laptop {
-    margin-top: 100px;
+    margin-top: 150px;
   }
   .quote {
     margin: 5.8em 0 0 .8em ;
@@ -162,6 +157,10 @@ body {
 }
 
 @media only screen and (min-width: 600px) {
+
+  #laptop {
+    margin-top: 180px;
+  }
   .quote {
     margin: 7.8em 0 0 .8em ;
     font-size: 1.8em;
@@ -175,7 +174,7 @@ body {
 @media only screen and (min-width: 720px) {
 
   #laptop {
-    margin-top: 180px;
+    margin-top: 220px;
   }
 
   .logo-container .wrapper {
@@ -202,20 +201,16 @@ body {
       font-size: 0.7em;
     }
   }
-  li {
-    float: left;
-    margin-left: 1.3em;
-  }
 }
 
 
 @media only screen and (min-width: 960px) {
 
   #laptop {
-    margin-top:0;
+    margin:0;
     bottom: 0;
     right: 0;
-    max-width: 60%;
+    max-width: 50%;
 
   }
 
@@ -232,6 +227,7 @@ body {
   }
   .links {
     position: absolute;
+    margin: 0;
 
     li {
       float: left;
@@ -243,19 +239,25 @@ body {
 //
 @media only screen and (min-width: 1280px) {
 
-  .container {
-    margin-left: 5em;
+  .logo-container {
+    padding-left: 5em;
   }
-  #laptop {
-    max-width: 70%;
+  .quote {
+    padding-left: 3em;
+  }
 
+  #laptop {
+    max-width: 60%;
   }
 
   .links {
-      right: 30%;
+      right: 1%;
       margin: 0.5em;
       padding: 0;
       top: 10px;
+    ul li a {
+      font-size: 25px;
+    }
 
   }
 
