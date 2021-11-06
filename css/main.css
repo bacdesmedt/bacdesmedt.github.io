@@ -1,0 +1,175 @@
+:root {
+  --dark-color: #232425;
+  --orange-color: #e78d05;
+}
+
+html {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html, body, div, span, ul, li, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Montserrat, system-ui;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: var(--dark-color);
+  color: white;
+  width: 100%;
+}
+
+.nav-header {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--orange-color);
+  height: 80px;
+}
+.nav-header .logo-container {
+  position: absolute;
+  left: 16px;
+  top: 6px;
+  height: 100%;
+}
+.nav-header .logo-container .wrapper {
+  display: inline-flex;
+}
+.nav-header .logo-container .wrapper span {
+  color: white;
+  font-family: "Inconsolata Extra Expanded Light", monospace;
+  font-size: 1.6em;
+  letter-spacing: -0.08em;
+  position: relative;
+}
+.nav-header .logo-container .wrapper span:hover {
+  color: var(--dark-color);
+}
+.nav-header .logo-container .wrapper #ben {
+  margin: 0.3em -0.4em 0 0;
+}
+.nav-header .logo-container .wrapper #slash {
+  margin: 0;
+  font-family: "Inconsolata Condensed Light", monospace;
+  font-size: 4em;
+}
+.nav-header .logo-container .wrapper #type-target {
+  color: var(--dark-color);
+  margin: 1.2em 0 0 -0.3em;
+  left: 0;
+  text-align: left;
+}
+.nav-header .logo-container .wrapper #type-target:hover {
+  color: white;
+}
+.nav-header .links {
+  list-style: none;
+  position: relative;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: 24px;
+  display: block;
+  transform: translateX(-50%);
+}
+.nav-header .links li {
+  position: relative;
+  padding: 0.5em;
+  float: left;
+  display: flex;
+  top: 2.5em;
+  transform: translateY(-50%);
+  margin-left: 1em;
+}
+.nav-header .links li .link {
+  color: var(--dark-color);
+  font-family: "Inconsolata Extra Expanded Light", monospace;
+  font-size: 1.5em;
+  letter-spacing: -0.1em;
+}
+.nav-header .links li .link:hover {
+  color: white;
+}
+
+@media only screen and (min-width: 600px) {
+  #ben:after {
+    content: "en";
+  }
+
+  .link {
+    font-size: 2em !important;
+  }
+}
+@media only screen and (min-width: 960px) {
+  #type-target:after {
+    content: "|";
+    animation-name: typer-anim;
+    animation-duration: 6s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+  }
+}
+@keyframes typer-anim {
+  0%, 51%, 100% {
+    content: "|";
+  }
+  2%, 52% {
+    content: "e|";
+  }
+  4% {
+    content: "es|";
+  }
+  6% {
+    content: "esm|";
+  }
+  8% {
+    content: "esme|";
+  }
+  10% {
+    content: "esmed|";
+  }
+  12%, 22%, 32%, 42% {
+    content: "esmedt|";
+  }
+  17%, 27%, 37%, 47%, 49% {
+    content: "esmedt";
+  }
+  54% {
+    content: "ev|";
+  }
+  56% {
+    content: "eve|";
+  }
+  58% {
+    content: "evel|";
+  }
+  60% {
+    content: "evelo|";
+  }
+  62% {
+    content: "evelop|";
+  }
+  64% {
+    content: "evelope|";
+  }
+  66%, 76%, 86%, 96% {
+    content: "eveloper|";
+  }
+  71%, 81%, 91%, 99% {
+    content: "eveloper";
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
