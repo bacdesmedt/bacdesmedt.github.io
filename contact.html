@@ -9,8 +9,75 @@
 
     <script type="module" src="js/nav-header.js"></script>
     <navigation-header current="contact"></navigation-header>
+
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-CONTACT SECTION TO COME
+
+
+<article id="socials">
+    <header>
+        <h2>Find me on ...</h2>
+    </header>
+    <div class="container">
+        <div>
+            <a href="www.linkedin.com/in/bacdesmedt">
+                <span class="label">
+                    <img src="images/ic_linkedin.png" alt="LinkedIn">
+                    <br>LinkedIn
+                </span>
+            </a>
+        </div>
+        <div>
+            <a href="https://github.com/bendesmedt">
+                <span class="label">
+                    <img src="images/ic_github.png" alt="GitHub">
+                    <br>Github
+                </span>
+            </a>
+        </div>
+        <div>
+            <a href="https://bit.ly/3lR3HJJ">
+                <span class="label">
+                    <img src="images/ic_tinder.png" alt="Tinder">
+                    <br>Tinder
+                </span>
+            </a>
+        </div>
+
+    </div>
+</article>
+<article id="contact">
+    <header>
+        <h2>Contact me</h2>
+        <p>I welcome interesting career opportunities and curious tidbits.
+            I am happy with my provider, and I am already made aware of the hot singles in my neighbourhood.
+        </p>
+    </header>
+    <div class="container">
+        <form action="https://formsubmit.co/bac.desmedt@gmail.com" method="POST">
+            <div class="info-input">
+                <div><label for="name">Name</label>
+                    <input type="text" id="name" name="name"></div>
+                <div><label for="email">Email</label>
+                    <input type="email" id="email" name="email"></div>
+            </div>
+
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <div class="send">
+                <button id="send-btn" type="submit">Send Message</button>
+                <div id="status"></div>
+            </div>
+        </form>
+
+    </div>
+</article>
+
+<footer class="foot">
+    <div>
+        &copy; 2021 - <span>ben/</span>desmedt - All rights reserved.
+    </div>
+</footer>
 </body>
 </html>

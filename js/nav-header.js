@@ -7,7 +7,7 @@ class NavigationHeader extends HTMLElement{
 
         for (let i = 0; i < menu_items.length; i++) {
             if(curr.toLowerCase().localeCompare(menu_items[i].toLowerCase()) != 0){
-                html_menu += '<li><a class="link" href="';
+                html_menu += '<li class="link-item"><a class="link" href="';
                 html_menu += menu_src[i];
                 html_menu += '">';
                 html_menu += menu_items[i];
@@ -110,7 +110,7 @@ class NavigationHeader extends HTMLElement{
             '            display: block;\n' +
             '            transform: translateX(-50%);\n' +
             '        }\n' +
-            '        .nav-header .links li {\n' +
+            '        .nav-header .links .link-item {\n' +
             '            position: relative;\n' +
             '            padding: 0.5em;\n' +
             '            float: left;\n' +
@@ -119,13 +119,13 @@ class NavigationHeader extends HTMLElement{
             '            transform: translateY(-50%);\n' +
             '            margin-left: 1em;\n' +
             '        }\n' +
-            '        .nav-header .links li .link {\n' +
+            '        .nav-header .links .link-item .link {\n' +
             '            color: var(--dark-color);\n' +
             '            font-family: "Inconsolata Extra Expanded Light", monospace;\n' +
             '            font-size: 1.5em;\n' +
             '            letter-spacing: -0.1em;\n' +
             '        }\n' +
-            '        .nav-header .links li .link:hover {\n' +
+            '        .nav-header .links .link-item .link:hover {\n' +
             '            color: white;\n' +
             '        }\n' +
             '        @media only screen and (min-width: 600px) {\n' +
@@ -138,64 +138,67 @@ class NavigationHeader extends HTMLElement{
             '        }\n' +
             '        @media only screen and (min-width: 960px) {\n' +
             '            #type-target:after {\n' +
-            '                content: "|";\n' +
-            '                animation-name: typer-anim;\n' +
-            '                animation-duration: 6s;\n' +
-            '                animation-delay: 0s;\n' +
-            '                animation-iteration-count: infinite;\n' +
+            '               content: "";' +
+            '               animation-name: typer-anim, blink;\n ' +
+            '               animation-duration: 6s;\n ' +
+            '               animation-delay: 0s;\n' +
+            '               animation-timing-function: linear;\n ' +
+            '               animation-iteration-count: infinite;\n ' +
+            '           }\n ' +
+            '       }\n ' +
+            '       @keyframes blink {\n' +
+            '            0%, 10%, 12%, 22%, 32%, 42%, 66%, 76%, 86%, 96%, 100%  {\n' +
+            '                border-right: 1.2px solid var(--dark-color);\n' +
             '            }\n' +
+            '            17%, 27%, 37%, 47%, 49%,71%, 81%, 91%, 99% {\n' +
+            '                border-right: none;\n' +
+            '            }\n' +
+            '        }\n ' +
+            '       @keyframes typer-anim {\n' +
+            '           0%, 51%, 100% {\n' +
+            '               content: "";\n' +
+            '           }\n  ' +
+            '           2%, 52% {\n' +
+            '               content: "e";\n' +
+            '           }\n   ' +
+            '           4% {\n   ' +
+            '               content: "es";\n' +
+            '           }\n' +
+            '           6% {\n' +
+            '               content: "esm";\n' +
+            '           }\n' +
+            '           8% {\n' +
+            '               content: "esme";\n' +
+            '           }\n      ' +
+            '           10% {\n' +
+            '               content: "esmed";\n' +
+            '           }\n' +
+            '           12%, 49% {\n' +
+            '               content: "esmedt";\n' +
+            '           }\n' +
+            '           54% {\n' +
+            '               content: "ev";\n' +
+            '           }\n' +
+            '           56% {\n' +
+            '               content: "eve";\n' +
+            '           }\n' +
+            '           58% {\n' +
+            '               content: "evel";\n' +
+            '           }\n' +
+            '           60% {\n' +
+            '               content: "evelo";\n' +
+            '           }\n            ' +
+            '           62% {\n' +
+            '               content: "evelop";\n' +
+            '           }\n' +
+            '           64% {\n' +
+            '               content: "evelope";\n' +
+            '           }\n' +
+            '           66%, 99% {\n' +
+            '               content: "eveloper";\n' +
+            '           }\n' +
             '        }\n' +
-            '        @keyframes typer-anim {\n' +
-            '            0%, 51%, 100% {\n' +
-            '                content: "|";\n' +
-            '            }\n' +
-            '            2%, 52% {\n' +
-            '                content: "e|";\n' +
-            '            }\n' +
-            '            4% {\n' +
-            '                content: "es|";\n' +
-            '            }\n' +
-            '            6% {\n' +
-            '                content: "esm|";\n' +
-            '            }\n' +
-            '            8% {\n' +
-            '                content: "esme|";\n' +
-            '            }\n' +
-            '            10% {\n' +
-            '                content: "esmed|";\n' +
-            '            }\n' +
-            '            12%, 22%, 32%, 42% {\n' +
-            '                content: "esmedt|";\n' +
-            '            }\n' +
-            '            17%, 27%, 37%, 47%, 49% {\n' +
-            '                content: "esmedt";\n' +
-            '            }\n' +
-            '            54% {\n' +
-            '                content: "ev|";\n' +
-            '            }\n' +
-            '            56% {\n' +
-            '                content: "eve|";\n' +
-            '            }\n' +
-            '            58% {\n' +
-            '                content: "evel|";\n' +
-            '            }\n' +
-            '            60% {\n' +
-            '                content: "evelo|";\n' +
-            '            }\n' +
-            '            62% {\n' +
-            '                content: "evelop|";\n' +
-            '            }\n' +
-            '            64% {\n' +
-            '                content: "evelope|";\n' +
-            '            }\n' +
-            '            66%, 76%, 86%, 96% {\n' +
-            '                content: "eveloper|";\n' +
-            '            }\n' +
-            '            71%, 81%, 91%, 99% {\n' +
-            '                content: "eveloper";\n' +
-            '            }\n' +
-            '        }\n' +
-            '    </style>'+
+            '    </style>\n'+
             '</header>');
 
     }

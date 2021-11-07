@@ -9,8 +9,94 @@
 
     <script type="module" src="js/nav-header.js"></script>
     <navigation-header current="info"></navigation-header>
+
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-INFO SECTION TO COME
+
+<article id="languages">
+    <div class="computer-languages">
+        <header>
+            <h2>Computer Languages</h2>
+            <p>Beep boop beep. Some Computer Languages I'm comfortable with. Obvious Java is my principal lingo. I
+                dabbled with some android apps in kotlin, and as mentioned I've worked in C# before, but it has been
+                a while. Everything you see here is made from scratch with html, css and some javascript. This
+                website has a responsive design</p>
+        </header>
+        <div class="computer-languages-logos">
+            <img src="images/java.png" alt="java logo" class="lingo" id="java-logo">
+            <img src="images/csharp.png" alt="C sharp logo" class="lingo">
+            <img src="images/kotlin.png" alt="kotlin logo" class="lingo">
+            <img src="images/frontend3.png" alt="logos of html, javascript and css" class="lingo">
+        </div>
+        <p>I also have cursory knowledge of objective-C, python and ruby</p>
+    </div>
+    <div class="human-languages">
+        <header>
+            <h2>Human Languages</h2>
+            <p>Yes, I also speak some human languages</p>
+        </header>
+        <table class="language-table">
+            <tr>
+                <td><label for="file">Nederlands</label></td>
+                <td>
+                    <progress id="file" value="100" max="100"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="file">English</label></td>
+                <td>
+                    <progress id="file" value="88" max="100"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="file">Français</label></td>
+                <td>
+                    <progress id="file" value="68" max="100"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="file">Deutsch</label></td>
+                <td>
+                    <progress id="file" value="18" max="100"></progress>
+                </td>
+            </tr>
+        </table>
+        <p>I can also read some Aurebesh and I can understand Ewoks, depending on the dialect and my blood alohol level
+            .</p>
+    </div>
+</article>
+
+<article id="general">
+    <header>
+        <h2>General info and personal curioso</h2>
+        <p>Some interesting and some useless information about yours truly</p>
+    </header>
+    <div class="general-container">
+        <ul class="curioso">
+            <li>Driver License B</li>
+            <li>Self-proclaimed PhotoShop Expert</li>
+            <li>I have a reputation of 626 on stackoverflow</li>
+            <li>Google Docs aficionado</li>
+            <li>Linux user</li>
+            <li>Comfortable with silence</li>
+            <li>Likes tea</li>
+            <li>Unable to pronounce "Worcestershire sauce"</li>
+            <li>Colorblind</li>
+            <li>Former Capoeirista</li>
+            <li>Knitting over Crochet</li>
+            <li>Can solve a Rubik's Cube</li>
+            <li>Still waiting for Godot</li>
+            <li>Not over the fact that penguins have knees</li>
+            <li>Love shortcuts keys</li>
+        </ul>
+    </div>
+</article>
+
+<footer class="foot">
+    <div>
+        &copy; 2021 - <span>ben/</span>desmedt - All rights reserved.
+    </div>
+</footer>
 </body>
 </html>
