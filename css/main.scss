@@ -65,6 +65,11 @@ article {
       text-align: left;
       max-width: 960px;
     }
+
+
+    .single-line {
+      text-align: center;
+    }
   }
 }
 
@@ -264,6 +269,7 @@ article {
 
     button {
       background-color: var(--orange-color);
+      font-family: "Inconsolata Extra Expanded Light", monospace;
       color: white;
       font-weight: bold;
       font-size: 1.3em;
@@ -313,6 +319,10 @@ article {
   img {
     width: 6em;
     height: auto;
+  }
+
+  .label {
+    color: white;
   }
 }
 
@@ -393,19 +403,7 @@ footer.foot {
       }
     }
   }
-
-  //SOCIALS
-  #socials {
-    //justify-content: center;
-    .container {
-      //display: grid;
-      //grid-template-columns: 1fr fit-content(30%);
-
-    }
-  }
-
 }
-
 
 //MEDIUM-LARGE
 @media only screen and (min-width: 960px) {

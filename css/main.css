@@ -61,6 +61,9 @@ article header p {
   text-align: left;
   max-width: 960px;
 }
+article header .single-line {
+  text-align: center;
+}
 
 #intro {
   margin-bottom: 3em;
@@ -219,6 +222,7 @@ article header p {
 }
 #contact .container form button {
   background-color: var(--orange-color);
+  font-family: "Inconsolata Extra Expanded Light", monospace;
   color: white;
   font-weight: bold;
   font-size: 1.3em;
@@ -258,6 +262,9 @@ article header p {
 #socials img {
   width: 6em;
   height: auto;
+}
+#socials .label {
+  color: white;
 }
 
 footer.foot {
