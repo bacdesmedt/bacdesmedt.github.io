@@ -31,6 +31,10 @@ class NavigationHeader extends HTMLElement{
             '            --dark-color: #232425;\n' +
             '            --orange-color: #e78d05;\n' +
             '        }\n' +
+            '       @font-face {\n' +
+            '           font-family: "Inconsolata Extra Expanded Light";\n' +
+            '           src: url("../fonts/Inconsolata-ExtraExpandedLight.ttf");\n' +
+            '        }' +
             '        html {\n' +
             '            scroll-behavior: smooth;\n' +
             '            -ms-overflow-style: none;\n' +
@@ -43,7 +47,7 @@ class NavigationHeader extends HTMLElement{
             '            margin: 0;\n' +
             '            padding: 0;\n' +
             '            border: 0;\n' +
-            '            font-family: Montserrat, system-ui;\n' +
+            '            font-family: "Inconsolata Extra Expanded Light", monospace;\n' +
             '            font-size: 16px;\n' +
             '        }\n' +
             '        a {\n' +
