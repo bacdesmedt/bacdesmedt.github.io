@@ -149,26 +149,30 @@ article {
     display: grid;
     padding: 1.2em;
     grid-gap: 1.2em;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(1,1fr);
 
     .tool-frame {
-      padding: .6em;
       background: var(--darker-color);
       margin: 0 auto;
       border-radius: 1.2em;
+      //width: 80vw;
 
       span img {
         height: 6em;
         width: auto;
         padding: 1em;
         border-radius: 100%;
-        margin: 0 1em 0 1em;
-        background: var(--dark-color);;
+        margin: 0 1em 2em 1em;
+        background: var(--dark-color);
       }
 
       h3 {
         color: var(--orange-color);
         font-weight: 500;
+      }
+
+      p {
+        color: var(--transparant-white)
       }
     }
   }
@@ -357,17 +361,7 @@ footer.foot {
   }
 }
 
-// MEDIUM-SMALL
-@media only screen and (min-width: 580px)  {
-
-
-  //TOOLS SECTION
-  #tools {
-    .tool-box {
-      grid-template-columns:repeat(3,1fr);
-    }
-  }
-}
+// MEDIUM
 @media only screen and (min-width: 720px)  {
 
   //INTRO
@@ -389,6 +383,13 @@ footer.foot {
       p {
         font-size: 1.5rem;
       }
+    }
+  }
+
+  //TOOLS SECTION
+  #tools {
+    .tool-box {
+      grid-template-columns:repeat(2,1fr);
     }
   }
 
@@ -417,21 +418,19 @@ footer.foot {
 }
 
 //MEDIUM-LARGE
-@media only screen and (min-width: 860px){
+@media only screen and (min-width: 960px){
 
+  //TOOLS SECTION
+  #tools {
+    .tool-box {
+      grid-template-columns:repeat(3,1fr);
+    }
+  }
 
   //CONTACT
   #contact .container {
     max-width: 1000px;
     margin: auto;
-  }
-
-
-  //TOOLS SECTION
-  #tools {
-    .tool-box {
-      grid-template-columns:repeat(4,1fr);
-    }
   }
 }
 
@@ -472,15 +471,18 @@ footer.foot {
       background: var(--darker-color);
       text-align: left;
       border-radius: 2em;
+
+
+      //h1 {
+      //  font-size: 2.2rem;
+      //}
+      //
+      //p {
+      //  font-size: 2rem;
+      //}
     }
   }
 
-  //TOOLS SECTION
-  #tools {
-    .tool-box {
-      grid-template-columns:repeat(5,1fr);
-    }
-  }
 }
 
 
@@ -514,6 +516,15 @@ footer.foot {
     }
   }
 
+
+  //TOOLS SECTION
+  #tools {
+    .tool-box {
+      grid-template-columns:repeat(4,1fr);
+    }
+
+  }
+
 }
 
 
@@ -525,13 +536,4 @@ footer.foot {
     max-width: 1400px;
   }
 
-
-
-  //TOOLS SECTION
-  #tools {
-    .tool-box {
-      grid-template-columns:repeat(6,1fr);
-    }
-
-  }
 }

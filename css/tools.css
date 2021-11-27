@@ -129,10 +129,9 @@ article header .single-line {
   display: grid;
   padding: 1.2em;
   grid-gap: 1.2em;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
 #tools .tool-box .tool-frame {
-  padding: 0.6em;
   background: var(--darker-color);
   margin: 0 auto;
   border-radius: 1.2em;
@@ -142,12 +141,15 @@ article header .single-line {
   width: auto;
   padding: 1em;
   border-radius: 100%;
-  margin: 0 1em 0 1em;
+  margin: 0 1em 2em 1em;
   background: var(--dark-color);
 }
 #tools .tool-box .tool-frame h3 {
   color: var(--orange-color);
   font-weight: 500;
+}
+#tools .tool-box .tool-frame p {
+  color: var(--transparant-white);
 }
 
 #languages {
@@ -294,11 +296,6 @@ footer.foot span {
   color: var(--orange-color);
 }
 
-@media only screen and (min-width: 580px) {
-  #tools .tool-box {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 @media only screen and (min-width: 720px) {
   #intro .image-col {
     margin-bottom: -8em;
@@ -312,6 +309,10 @@ footer.foot span {
   }
   #intro .text-col p {
     font-size: 1.5rem;
+  }
+
+  #tools .tool-box {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #history img {
@@ -329,14 +330,14 @@ footer.foot span {
     margin-right: 1.6em;
   }
 }
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 960px) {
+  #tools .tool-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   #contact .container {
     max-width: 1000px;
     margin: auto;
-  }
-
-  #tools .tool-box {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 1080px) {
@@ -369,10 +370,6 @@ footer.foot span {
     text-align: left;
     border-radius: 2em;
   }
-
-  #tools .tool-box {
-    grid-template-columns: repeat(5, 1fr);
-  }
 }
 @media only screen and (min-width: 1280px) {
   #intro .image-col {
@@ -393,15 +390,15 @@ footer.foot span {
   #intro .text-col p {
     font-size: 1.8rem;
   }
+
+  #tools .tool-box {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 @media only screen and (min-width: 1680px) {
   #intro .container {
     max-width: 1400px;
   }
-
-  #tools .tool-box {
-    grid-template-columns: repeat(6, 1fr);
-  }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=tools.css.map */
