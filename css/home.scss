@@ -68,7 +68,6 @@ body {
 }
 
 //LOGO
-
 .logo-container {
   text-align: center;
   padding-top: 2em;
@@ -100,9 +99,7 @@ body {
       margin: 1.4em 0 0 -.4em;
       left: 0;
       text-align: left;
-      //background: blue;
       position: relative;
-      //width: 230px;
 
       &:after {
         content: "";
@@ -191,137 +188,137 @@ body {
   }
 }
 
-  @media only screen and (min-width: 500px) {
-    .logo-container {
-      padding: 2em;
+@media only screen and (min-width: 500px) {
+  .logo-container {
+    padding: 2em;
+  }
+
+  #laptop {
+    margin-top: 150px;
+  }
+  .quote {
+    margin: 5.8em 0 0 .8em;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  #laptop {
+    margin-top: 180px;
+  }
+  .quote {
+    margin: 7.8em 0 0 .8em;
+    font-size: 1.8em;
+
+    span {
+      font-size: 0.6em;
+    }
+  }
+}
+
+@media only screen and (min-width: 720px) {
+
+  #laptop {
+    margin-top: 220px;
+  }
+
+  .logo-container .wrapper {
+    padding: 3em;
+    width: 400px;
+
+    span {
+      font-size: 60px;
     }
 
-    #laptop {
-      margin-top: 150px;
+    #slash {
+      font-size: 180px;
     }
-    .quote {
-      margin: 5.8em 0 0 .8em;
+
+    #type-target &:after {
+      right: -11px;
+      border-right: 2.6px solid white;
     }
   }
 
-  @media only screen and (min-width: 600px) {
+  .quote {
+    margin: 3.8em 0 0 .5em;
+    font-size: 2.1em;
+    max-width: 920px;
 
-    #laptop {
-      margin-top: 180px;
+    span {
+      font-size: 0.7em;
     }
-    .quote {
-      margin: 7.8em 0 0 .8em;
-      font-size: 1.8em;
+  }
+}
 
-      span {
-        font-size: 0.6em;
-      }
+
+@media only screen and (min-width: 960px) {
+
+  #laptop {
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 50%;
+
+  }
+
+  .logo-container {
+    text-align: left;
+  }
+  .quote {
+    margin: 0 0;
+    font-size: 2.1em;
+    max-width: 920px;
+
+    span {
+      font-size: 0.7em;
+    }
+  }
+  .links {
+    position: absolute;
+    margin: 0;
+
+    li {
+      float: left;
+      margin-left: 1.3em;
     }
   }
 
-  @media only screen and (min-width: 720px) {
+  .contact {
+    display: flex;
+    margin-left: 1.8em;
+  }
+}
 
-    #laptop {
-      margin-top: 220px;
+//
+@media only screen and (min-width: 1280px) {
+
+  .logo-container {
+    padding-left: 5em;
+  }
+  .quote {
+    padding-left: 3em;
+  }
+
+  #laptop {
+    max-width: 60%;
+  }
+
+  .links {
+    right: 1%;
+    margin: 0.5em;
+    padding: 0;
+    top: 10px;
+
+    ul li a {
+      font-size: 25px;
     }
 
-    .logo-container .wrapper {
-      padding: 3em;
-      width: 400px;
-
-      span {
-        font-size: 60px;
-      }
-
-      #slash {
-        font-size: 180px;
-      }
-
-      #type-target &:after {
-        right: -11px;
-        border-right: 2.6px solid white;
-      }
-    }
-
-    .quote {
-      margin: 3.8em 0 0 .5em;
-      font-size: 2.1em;
-      max-width: 920px;
-
-      span {
-        font-size: 0.7em;
-      }
-    }
   }
 
 
-  @media only screen and (min-width: 960px) {
-
-    #laptop {
-      margin: 0;
-      bottom: 0;
-      right: 0;
-      max-width: 50%;
-
-    }
-
-    .logo-container {
-      text-align: left;
-    }
-    .quote {
-      margin: 0 0;
-      font-size: 2.1em;
-      max-width: 920px;
-
-      span {
-        font-size: 0.7em;
-      }
-    }
-    .links {
-      position: absolute;
-      margin: 0;
-
-      li {
-        float: left;
-        margin-left: 1.3em;
-      }
-    }
-
-    .contact {
-      display: flex;
-      margin-left: 1.8em;
-    }
+  .contact {
+    margin-left: 6em;
   }
 
-  //
-  @media only screen and (min-width: 1280px) {
-
-    .logo-container {
-      padding-left: 5em;
-    }
-    .quote {
-      padding-left: 3em;
-    }
-
-    #laptop {
-      max-width: 60%;
-    }
-
-    .links {
-      right: 1%;
-      margin: 0.5em;
-      padding: 0;
-      top: 10px;
-
-      ul li a {
-        font-size: 25px;
-      }
-
-    }
-
-
-    .contact {
-      margin-left: 6em;
-    }
-
-  }
+}
