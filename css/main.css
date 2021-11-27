@@ -58,16 +58,12 @@ ul {
 body {
   background: var(--dark-color);
   color: white;
-  max-width: 100%;
   padding-top: 90px;
 }
 
 article {
   padding: 1.8em;
   text-align: center;
-}
-article header {
-  width: 100%;
 }
 article header h2 {
   display: block;
@@ -126,22 +122,21 @@ article header .single-line {
 #tools {
   text-align: center;
 }
-#tools h2 {
-  font-size: 1.2em;
+#tools header {
+  padding: 0 1em;
 }
 #tools .tool-box {
   display: grid;
   padding: 1.2em;
   grid-gap: 1.2em;
-  max-width: 100%;
+  grid-template-columns: repeat(1, 1fr);
 }
 #tools .tool-box .tool-frame {
-  text-align: center;
   background: var(--darker-color);
   margin: 0 auto;
   border-radius: 1.2em;
 }
-#tools .tool-box .tool-frame img {
+#tools .tool-box .tool-frame span img {
   height: 6em;
   width: auto;
   padding: 1em;
@@ -301,7 +296,7 @@ footer.foot span {
   color: var(--orange-color);
 }
 
-@media only screen and (min-width: 728px) {
+@media only screen and (min-width: 720px) {
   #intro .image-col {
     margin-bottom: -8em;
   }
@@ -316,9 +311,6 @@ footer.foot span {
     font-size: 1.5rem;
   }
 
-  #tools h2 {
-    font-size: 1.6em;
-  }
   #tools .tool-box {
     grid-template-columns: repeat(2, 1fr);
   }

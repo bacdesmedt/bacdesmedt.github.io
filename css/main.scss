@@ -12,18 +12,21 @@
   font-weight: 300;
   src: url("../fonts/Ubuntu-Light.ttf");
 }
+
 @font-face {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   src: url("../fonts/Ubuntu-Medium.ttf");
 }
+
 @font-face {
   font-family: "Ubuntu";
   font-style: italic;
   font-weight: 300;
   src: url("../fonts/Ubuntu-LightItalic.ttf");
 }
+
 @font-face {
   font-family: "Inconsolata Extra Expanded Light";
   src: url("../fonts/Inconsolata-ExtraExpandedLight.ttf");
@@ -48,6 +51,7 @@ html, body, div, article, section, table, p {
   font-weight: 300;
   font-size: 100%;
   vertical-align: center;
+  //max-width: 100%;
 }
 
 a {
@@ -62,7 +66,7 @@ ul {
 body {
   background: var(--dark-color);
   color: white;
-  max-width: 100%;
+  //max-width: 100%;
   padding-top: 90px;
 }
 
@@ -71,7 +75,7 @@ article {
   text-align: center;
 
   header {
-    width: 100%;
+    //width: 100%;
 
     h2 {
       display: block;
@@ -144,24 +148,25 @@ article {
 #tools {
   text-align: center;
 
-  h2 {
-    font-size: 1.2em;
+  header {
+    padding: 0 1em;
   }
 
   .tool-box {
     display: grid;
     padding: 1.2em;
     grid-gap: 1.2em;
-    max-width: 100%;
+    //width: 100%;
+    //max-width: 100%;
+    grid-template-columns:repeat(1,1fr);
 
     .tool-frame {
-      text-align: center;
       background: var(--darker-color);
       margin: 0 auto;
       border-radius: 1.2em;
+      //width: 80vw;
 
-
-      img {
+      span img {
         height: 6em;
         width: auto;
         padding: 1em;
@@ -365,9 +370,8 @@ footer.foot {
   }
 }
 
-
 // MEDIUM
-@media only screen and (min-width: 728px) {
+@media only screen and (min-width: 720px)  {
 
   //INTRO
   #intro {
@@ -393,13 +397,8 @@ footer.foot {
 
   //TOOLS SECTION
   #tools {
-
-    h2 {
-      font-size: 1.6em;
-    }
-
     .tool-box {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns:repeat(2,1fr);
     }
   }
 
@@ -428,11 +427,13 @@ footer.foot {
 }
 
 //MEDIUM-LARGE
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 960px){
 
   //TOOLS SECTION
-  #tools .tool-box {
-    grid-template-columns: repeat(3, 1fr);
+  #tools {
+    .tool-box {
+      grid-template-columns:repeat(3,1fr);
+    }
   }
 
   //CONTACT
@@ -526,8 +527,11 @@ footer.foot {
 
 
   //TOOLS SECTION
-  #tools .tool-box {
-    grid-template-columns: repeat(4, 1fr);
+  #tools {
+    .tool-box {
+      grid-template-columns:repeat(4,1fr);
+    }
+
   }
 
 }
