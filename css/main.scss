@@ -75,8 +75,7 @@ article {
   text-align: center;
 
   header {
-    //width: 100%;
-
+    padding: 0 1em;
     h2 {
       display: block;
       color: var(--orange-color);
@@ -148,16 +147,10 @@ article {
 #tools {
   text-align: center;
 
-  header {
-    padding: 0 1em;
-  }
-
   .tool-box {
     display: grid;
     padding: 1.2em;
     grid-gap: 1.2em;
-    //width: 100%;
-    //max-width: 100%;
     grid-template-columns:repeat(1,1fr);
 
     .tool-frame {
