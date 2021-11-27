@@ -3,22 +3,26 @@
   --dark-color: #232425;
   --orange-color: #e78d05;
 }
+
 @font-face {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 300;
   src: url("../fonts/Ubuntu-Light.ttf");
 }
+
 @font-face {
   font-family: 'Ubuntu';
   font-style: italic;
   font-weight: 300;
   src: url("../fonts/Ubuntu-LightItalic.ttf");
 }
+
 @font-face {
   font-family: "Inconsolata Extra Expanded Light";
   src: url("../fonts/Inconsolata-ExtraExpandedLight.ttf");
 }
+
 @font-face {
   font-family: "Inconsolata Condensed Light";
   src: url("../fonts/Inconsolata-CondensedLight.ttf");
@@ -114,14 +118,18 @@ body {
 }
 
 @keyframes blink {
-  0% { opacity: 0 }
-  100% { opacity: 1 }
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
 }
 
 
 //QUOTE
 .quote {
-  margin: 4em 0 0 .8em ;
+  margin: 4em 0 0 .8em;
   padding: .9em;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
@@ -134,10 +142,31 @@ body {
   }
 }
 
+//socials
+.contact {
+  text-align: center;
+  max-width: 160px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.6em;
+  margin: .6em auto;
+
+  div {
+    margin: 0 auto;
+    max-width: 100px;
+
+    img {
+      width: 2em;
+      height: auto;
+    }
+  }
+}
+
+
 //LINKS
 .links {
   text-align: center;
-  margin: 3em 0;
+  margin: 1em 0 3em 0;
 
   ul {
     display: inline-block;
@@ -162,122 +191,137 @@ body {
   }
 }
 
-@media only screen and (min-width: 500px) {
-  .logo-container{
-    padding: 2em;
-  }
-
-  #laptop {
-    margin-top: 150px;
-  }
-  .quote {
-    margin: 5.8em 0 0 .8em ;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-
-  #laptop {
-    margin-top: 180px;
-  }
-  .quote {
-    margin: 7.8em 0 0 .8em ;
-    font-size: 1.8em;
-
-    span {
-      font-size: 0.6em;
-    }
-  }
-}
-
-@media only screen and (min-width: 720px) {
-
-  #laptop {
-    margin-top: 220px;
-  }
-
-  .logo-container .wrapper {
-    padding: 3em;
-    width: 400px;
-    span {
-      font-size: 60px;
+  @media only screen and (min-width: 500px) {
+    .logo-container {
+      padding: 2em;
     }
 
-    #slash {
-      font-size: 180px;
+    #laptop {
+      margin-top: 150px;
+    }
+    .quote {
+      margin: 5.8em 0 0 .8em;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+
+    #laptop {
+      margin-top: 180px;
+    }
+    .quote {
+      margin: 7.8em 0 0 .8em;
+      font-size: 1.8em;
+
+      span {
+        font-size: 0.6em;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 720px) {
+
+    #laptop {
+      margin-top: 220px;
     }
 
-    #type-target &:after {
+    .logo-container .wrapper {
+      padding: 3em;
+      width: 400px;
+
+      span {
+        font-size: 60px;
+      }
+
+      #slash {
+        font-size: 180px;
+      }
+
+      #type-target &:after {
         right: -11px;
         border-right: 2.6px solid white;
+      }
+    }
+
+    .quote {
+      margin: 3.8em 0 0 .5em;
+      font-size: 2.1em;
+      max-width: 920px;
+
+      span {
+        font-size: 0.7em;
+      }
     }
   }
-  .quote {
-    margin: 3.8em 0 0 .5em ;
-    font-size: 2.1em;
-    max-width: 920px;
-    span {
-      font-size: 0.7em;
+
+
+  @media only screen and (min-width: 960px) {
+
+    #laptop {
+      margin: 0;
+      bottom: 0;
+      right: 0;
+      max-width: 50%;
+
+    }
+
+    .logo-container {
+      text-align: left;
+    }
+    .quote {
+      margin: 0 0;
+      font-size: 2.1em;
+      max-width: 920px;
+
+      span {
+        font-size: 0.7em;
+      }
+    }
+    .links {
+      position: absolute;
+      margin: 0;
+
+      li {
+        float: left;
+        margin-left: 1.3em;
+      }
+    }
+
+    .contact {
+      display: flex;
+      margin-left: 1.8em;
     }
   }
-}
 
+  //
+  @media only screen and (min-width: 1280px) {
 
-@media only screen and (min-width: 960px) {
-
-  #laptop {
-    margin:0;
-    bottom: 0;
-    right: 0;
-    max-width: 50%;
-
-  }
-
-  .logo-container {
-    text-align: left;
-  }
-  .quote {
-    margin: 0 0 ;
-    font-size: 2.1em;
-    max-width: 920px;
-    span {
-      font-size: 0.7em;
+    .logo-container {
+      padding-left: 5em;
     }
-  }
-  .links {
-    position: absolute;
-    margin: 0;
-
-    li {
-      float: left;
-      margin-left: 1.3em;
+    .quote {
+      padding-left: 3em;
     }
-  }
-}
 
-//
-@media only screen and (min-width: 1280px) {
+    #laptop {
+      max-width: 60%;
+    }
 
-  .logo-container {
-    padding-left: 5em;
-  }
-  .quote {
-    padding-left: 3em;
-  }
-
-  #laptop {
-    max-width: 60%;
-  }
-
-  .links {
+    .links {
       right: 1%;
       margin: 0.5em;
       padding: 0;
       top: 10px;
-    ul li a {
-      font-size: 25px;
+
+      ul li a {
+        font-size: 25px;
+      }
+
+    }
+
+
+    .contact {
+      margin-left: 6em;
     }
 
   }
-
-}
