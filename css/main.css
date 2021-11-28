@@ -332,7 +332,7 @@ footer.foot span {
 }
 @media only screen and (min-width: 860px) {
   #contact .container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
   }
 
