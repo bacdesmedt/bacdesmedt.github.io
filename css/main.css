@@ -76,6 +76,7 @@ article header h2 {
   font-family: "Inconsolata Extra Expanded Light", monospace;
   font-size: 2em;
   letter-spacing: -3px;
+  padding-bottom: 0.5em;
 }
 article header p {
   font-size: 1.3em;
