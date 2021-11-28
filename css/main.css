@@ -1,6 +1,7 @@
 :root {
   --dark-color: #232425;
   --darker-color: #181920;
+  --darkest-color: #111213;
   --orange-color: #e78d05;
   --transparant-white: rgba(255, 255, 255, .5);
 }

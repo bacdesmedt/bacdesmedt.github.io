@@ -2,6 +2,7 @@
 :root {
   --dark-color: #232425;
   --darker-color: #181920;
+  --darkest-color: #111213;
   --orange-color: #e78d05;
   --transparant-white: rgba(255, 255, 255, .5);
 }
@@ -170,6 +171,7 @@ article {
         color: var(--orange-color);
         font-weight: 500;
       }
+
     }
   }
 }
@@ -315,7 +317,6 @@ article {
 
 //SOCIALS
 #socials {
-
   .container {
     text-align: center;
     max-width: 640px;
@@ -359,7 +360,6 @@ footer.foot {
 
 // MEDIUM-SMALL
 @media only screen and (min-width: 580px)  {
-
   //TOOLS SECTION
   #tools {
     .tool-box {
@@ -367,6 +367,8 @@ footer.foot {
     }
   }
 }
+
+//MEDIUM
 @media only screen and (min-width: 720px)  {
 
   //INTRO
@@ -434,7 +436,6 @@ footer.foot {
   }
 }
 
-
 //LARGE
 @media only screen and (min-width: 1080px) {
 
@@ -482,7 +483,6 @@ footer.foot {
   }
 }
 
-
 //X-LARGE
 @media only screen and (min-width: 1280px) {
 
@@ -515,7 +515,6 @@ footer.foot {
 
 }
 
-
 //XX-LARGE
 @media only screen and (min-width: 1680px) {
 
@@ -523,8 +522,6 @@ footer.foot {
   #intro .container {
     max-width: 1400px;
   }
-
-
 
   //TOOLS SECTION
   #tools {
