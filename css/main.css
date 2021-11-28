@@ -37,7 +37,7 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-html, body, div, article, section, table, p {
+html, body, div, article, section, table, p, header, h2 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -45,6 +45,7 @@ html, body, div, article, section, table, p {
   font-weight: 300;
   font-size: 100%;
   vertical-align: center;
+  width: auto;
 }
 
 a {
@@ -213,7 +214,10 @@ article header .single-line {
   display: inline-block;
   text-align: left;
   list-style-type: square;
-  font-size: 1.2em;
+  max-width: 80%;
+}
+#general ul li {
+  font-size: 0.8em;
 }
 
 #contact .container form {
@@ -282,6 +286,15 @@ article header .single-line {
   color: white;
 }
 
+#hobbies .hobby-container {
+  display: flow;
+}
+#hobbies .hobby-container img {
+  width: 250px;
+  height: auto;
+  opacity: 0.7;
+}
+
 footer.foot {
   justify-content: center;
   text-align: center;
@@ -298,6 +311,10 @@ footer.foot span {
 @media only screen and (min-width: 580px) {
   #tools .tool-box {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  #general ul li {
+    font-size: 1em;
   }
 }
 @media only screen and (min-width: 720px) {
@@ -373,6 +390,10 @@ footer.foot span {
 
   #tools .tool-box {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  #general ul li {
+    font-size: 1.2em;
   }
 }
 @media only screen and (min-width: 1280px) {

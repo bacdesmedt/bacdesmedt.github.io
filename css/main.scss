@@ -44,7 +44,7 @@ html {
   scrollbar-width: none;
 }
 
-html, body, div, article, section, table, p {
+html, body, div, article, section, table, p, header, h2{
   margin: 0;
   padding: 0;
   border: 0;
@@ -52,6 +52,7 @@ html, body, div, article, section, table, p {
   font-weight: 300;
   font-size: 100%;
   vertical-align: center;
+  width: auto;
 }
 
 a {
@@ -75,6 +76,7 @@ article {
 
   header {
     padding: 0 1em;
+
     h2 {
       display: block;
       color: var(--orange-color);
@@ -89,7 +91,6 @@ article {
       text-align: left;
       max-width: 960px;
     }
-
 
     .single-line {
       text-align: center;
@@ -150,7 +151,7 @@ article {
     display: grid;
     padding: 1.2em;
     grid-gap: 1.2em;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2, 1fr);
 
     .tool-frame {
       padding: .6em;
@@ -256,7 +257,11 @@ article {
     display: inline-block;
     text-align: left;
     list-style-type: square;
-    font-size: 1.2em;
+    max-width: 80%;
+
+    li {
+      font-size: .8em;
+    }
   }
 }
 
@@ -341,6 +346,17 @@ article {
   }
 }
 
+//HOBBIES
+#hobbies .hobby-container {
+  display: flow;
+
+  img {
+    width: 250px;
+    height: auto;
+    opacity: 0.7;
+  }
+}
+
 //FOOTER
 footer.foot {
   justify-content: center;
@@ -359,17 +375,23 @@ footer.foot {
 }
 
 // MEDIUM-SMALL
-@media only screen and (min-width: 580px)  {
+@media only screen and (min-width: 580px) {
   //TOOLS SECTION
   #tools {
     .tool-box {
-      grid-template-columns:repeat(3,1fr);
+      grid-template-columns:repeat(3, 1fr);
     }
+  }
+
+  //GENERAL
+  #general ul li {
+    font-size: 1em;
   }
 }
 
+
 //MEDIUM
-@media only screen and (min-width: 720px)  {
+@media only screen and (min-width: 720px) {
 
   //INTRO
   #intro {
@@ -418,7 +440,7 @@ footer.foot {
 }
 
 //MEDIUM-LARGE
-@media only screen and (min-width: 860px){
+@media only screen and (min-width: 860px) {
 
 
   //CONTACT
@@ -431,7 +453,7 @@ footer.foot {
   //TOOLS SECTION
   #tools {
     .tool-box {
-      grid-template-columns:repeat(4,1fr);
+      grid-template-columns:repeat(4, 1fr);
     }
   }
 }
@@ -478,8 +500,13 @@ footer.foot {
   //TOOLS SECTION
   #tools {
     .tool-box {
-      grid-template-columns:repeat(5,1fr);
+      grid-template-columns:repeat(5, 1fr);
     }
+  }
+
+  //GENERAL
+  #general ul li {
+    font-size: 1.2em;
   }
 }
 
@@ -526,7 +553,7 @@ footer.foot {
   //TOOLS SECTION
   #tools {
     .tool-box {
-      grid-template-columns:repeat(6,1fr);
+      grid-template-columns:repeat(6, 1fr);
     }
 
   }

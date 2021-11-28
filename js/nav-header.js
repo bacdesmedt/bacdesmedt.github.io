@@ -61,8 +61,8 @@ class NavigationHeader extends HTMLElement{
             '        .nav-header {\n' +
             '            position: fixed;\n' +
             '            top: 0;\n' +
-            '            display: flex;\n' +
-            '            width: 100%;\n' +
+            '            display: flex;\n            left: 0;\n            right: 0;\n' +
+            '            // width: 100%;\n' +
             '            margin: 0;\n' +
             '            padding: 0;\n' +
             '            background: var(--orange-color);\n' +
