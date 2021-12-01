@@ -1,8 +1,8 @@
-class NavigationHeader extends HTMLElement{
-    connectedCallback(){
+class NavigationHeader extends HTMLElement {
+    connectedCallback() {
         const curr = this.getAttribute('current');
-        const menu_items = ['about','toolkit', 'info', 'contact'];
-        const menu_src = ['about.html','toolkit.html','info.html','contact.html'];
+        const menu_items = ['about', 'toolkit', /*'résumé',*/ 'contact'];
+        const menu_src = ['about.html', 'toolkit.html',/*'info.html',*/'contact.html'];
         let html_menu = '';
 
         for (let i = 0; i < menu_items.length; i++) {
@@ -10,12 +10,14 @@ class NavigationHeader extends HTMLElement{
                 html_menu += '<li class="link-item"><a class="link" href="';
                 html_menu += menu_src[i];
                 html_menu += '">';
-                html_menu += menu_items[i];
-                html_menu += '</a></li>\n';
+            } else {
+                html_menu += '<li class="link-item" id="current" ><a class="link" >';
             }
+            html_menu += menu_items[i];
+            html_menu += '</a></li>\n';
         }
 
-        this.setInnerHtml(this,'<header class="nav-header">\n' +
+        this.setInnerHtml(this, '<header class="nav-header">\n' +
             '    <a href="index.html" class="logo-container">\n' +
             '        <div class="wrapper">\n' +
             '            <span id="ben">b</span>\n' +
@@ -24,7 +26,7 @@ class NavigationHeader extends HTMLElement{
             '        </div>\n' +
             '    </a>\n' +
             '    <ul class="links">\n' +
-                    html_menu +
+            html_menu +
             '    </ul>\n' +
             '<style>\n' +
             '        :root {\n' +
@@ -66,7 +68,7 @@ class NavigationHeader extends HTMLElement{
             '            margin: 0;\n' +
             '            padding: 0;\n' +
             '            background: var(--orange-color);\n' +
-            '            height: 80px;\n' +
+            '            height: 80px;\n            // border-bottom: 1px solid var(--dark-color);\n            z-index:300;\n' +
             '        }\n' +
             '        .nav-header .logo-container {\n' +
             '            position: absolute;\n' +
@@ -128,7 +130,7 @@ class NavigationHeader extends HTMLElement{
             '            font-family: "Inconsolata Extra Expanded Light", monospace;\n' +
             '            font-size: 1.5em;\n' +
             '            letter-spacing: -0.1em;\n' +
-            '        }\n' +
+            '        }\n\n        .nav-header .links #current a{\n            color: white;\n        }\n        \n' +
             '        .nav-header .links .link-item .link:hover {\n' +
             '            color: white;\n' +
             '        }\n' +
@@ -202,20 +204,21 @@ class NavigationHeader extends HTMLElement{
             '               content: "eveloper";\n' +
             '           }\n' +
             '        }\n' +
-            '    </style>\n'+
+            '    </style>\n' +
             '</header>');
 
     }
 
     setInnerHtml(elm, html) {
         elm.innerHTML = html;
-        Array.from(elm.querySelectorAll("script")).forEach( oldScript => {
+        Array.from(elm.querySelectorAll("script")).forEach(oldScript => {
             const newScript = document.createElement("script");
             Array.from(oldScript.attributes)
-                .forEach( attr => newScript.setAttribute(attr.name, attr.value) );
+                .forEach(attr => newScript.setAttribute(attr.name, attr.value));
             newScript.appendChild(document.createTextNode(oldScript.innerHTML));
             oldScript.parentNode.replaceChild(newScript, oldScript);
         });
     }
 }
+
 customElements.define("navigation-header", NavigationHeader)

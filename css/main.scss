@@ -184,7 +184,7 @@ article {
   padding: 1.2em;
 
   h2 {
-    margin-top: 4em;
+    margin-top: 1em;
   }
 
   img.lingo {
@@ -241,13 +241,6 @@ article {
 
 }
 
-//HISTORY
-#history {
-  img {
-    max-width: 100%;
-  }
-}
-
 //GENERAL
 #general {
   div.general-container {
@@ -263,6 +256,51 @@ article {
     li {
       font-size: .8em;
     }
+  }
+}
+
+//HOBBIES
+#hobbies .hobby-container {
+  z-index: auto;
+  display: flow;
+
+  img {
+    width: 250px;
+    height: auto;
+    opacity: 0.7;
+  }
+}
+
+//HISTORY
+#history {
+  img {
+    max-width: 100%;
+  }
+}
+
+//SOCIALS
+#socials {
+  .container {
+    text-align: center;
+    max-width: 640px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.6em;
+    margin: 0 auto;
+
+    div {
+      margin: 0 auto;
+      max-width: 100px;
+    }
+  }
+
+  img {
+    width: 6em;
+    height: auto;
+  }
+
+  .label {
+    color: white;
   }
 }
 
@@ -318,43 +356,6 @@ article {
       font-weight: 500;
       margin: 0;
     }
-  }
-}
-
-//SOCIALS
-#socials {
-  .container {
-    text-align: center;
-    max-width: 640px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1.6em;
-    margin: 0 auto;
-
-    div {
-      margin: 0 auto;
-      max-width: 100px;
-    }
-  }
-
-  img {
-    width: 6em;
-    height: auto;
-  }
-
-  .label {
-    color: white;
-  }
-}
-
-//HOBBIES
-#hobbies .hobby-container {
-  display: flow;
-
-  img {
-    width: 250px;
-    height: auto;
-    opacity: 0.7;
   }
 }
 
