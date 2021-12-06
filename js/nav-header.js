@@ -27,7 +27,7 @@ class NavigationHeader extends HTMLElement {
             '    </a>\n' +
             '    <ul class="links">\n' +
             html_menu +
-            '    </ul>\n' +
+            '    </ul>\n    <a href="./cvbendesmedt2021english.pdf" download><img class="dl-button" src="../images/download.png" \n                                                     alt="download button"/></a>\n' +
             '<style>\n' +
             '        :root {\n' +
             '            --dark-color: #232425;\n' +
@@ -58,7 +58,7 @@ class NavigationHeader extends HTMLElement {
             '        body {\n' +
             '            background: var(--dark-color);\n' +
             '            color: white;\n' +
-            '            width: 100%;\n' +
+            '            // width: 100%;\n' +
             '        }\n' +
             '        .nav-header {\n' +
             '            position: fixed;\n' +
@@ -68,7 +68,14 @@ class NavigationHeader extends HTMLElement {
             '            margin: 0;\n' +
             '            padding: 0;\n' +
             '            background: var(--orange-color);\n' +
-            '            height: 80px;\n            // border-bottom: 1px solid var(--dark-color);\n            z-index:300;\n' +
+            '            height: 80px;\n            z-index:300;\n' +
+            '        }\n' +
+            '        .nav-header img {\n' +
+            '            position: absolute;\n' +
+            '            top:25px;\n' +
+            '            right: 25px;\n' +
+            '            height: 30px;\n' +
+            '            cursor: pointer;\n' +
             '        }\n' +
             '        .nav-header .logo-container {\n' +
             '            position: absolute;\n' +
@@ -133,7 +140,7 @@ class NavigationHeader extends HTMLElement {
             '        }\n\n        .nav-header .links #current a{\n            color: white;\n        }\n        \n' +
             '        .nav-header .links .link-item .link:hover {\n' +
             '            color: white;\n' +
-            '        }\n' +
+            '        }\n        \n        .dl-button {\n            \n        }\n' +
             '        @media only screen and (min-width: 600px) {\n' +
             '            #ben:after {\n' +
             '                content: "en";\n' +
