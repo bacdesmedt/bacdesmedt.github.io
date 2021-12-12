@@ -27,7 +27,9 @@ class NavigationHeader extends HTMLElement {
             '    </a>\n' +
             '    <ul class="links">\n' +
             html_menu +
-            '    </ul>\n    <a href="./cvbendesmedt2021english.pdf" download><img class="dl-button" src="../images/download.png" \n                                                     alt="download button"/></a>\n' +
+            '    </ul>\n    <a href="./cvbendesmedt2021english.pdf" download title="Donwload my resume"><img' +
+            ' class="dl-button"' +
+            ' src="../images/download.png" \n                                                     alt="download button"/></a>\n' +
             '<style>\n' +
             '        :root {\n' +
             '            --dark-color: #232425;\n' +
