@@ -27,7 +27,7 @@ class NavigationHeader extends HTMLElement {
             '    </a>\n' +
             '    <ul class="links">\n' +
             html_menu +
-            '    </ul>\n    <a href="./cvbendesmedt2021english.pdf" download title="Donwload my resume"><img' +
+            '    </ul>\n    <a href="./bendesmedt_javadev_resume_1221.pdf" download title="Donwload my resume"><img' +
             ' class="dl-button"' +
             ' src="../images/download.png" \n                                                     alt="download button"/></a>\n' +
             '<style>\n' +
